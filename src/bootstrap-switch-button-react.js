@@ -55,10 +55,9 @@ export default class BootstrapSwitchButton extends React.Component {
 			this.setState({ checked });
 		}
 	}
-
-	toggle = event => {
+	toggle = (event) => {
 		this.state.checked ? this.off() : this.on();
-	};
+	}
 	off = () => {
 		if (!this.state.disabled) {
 			this.setState({
@@ -66,7 +65,7 @@ export default class BootstrapSwitchButton extends React.Component {
 			});
 			if (this.props.onChange) this.props.onChange(false);
 		}
-	};
+	}
 	on = () => {
 		if (!this.state.disabled) {
 			this.setState({
@@ -74,17 +73,17 @@ export default class BootstrapSwitchButton extends React.Component {
 			});
 			if (this.props.onChange) this.props.onChange(true);
 		}
-	};
+	}
 	enable = () => {
 		this.setState({
 			disabled: false,
 		});
-	};
+	}
 	disable = () => {
 		this.setState({
 			disabled: true,
 		});
-	};
+	}
 
 	render = () => {
 		const styles = this.props.style === undefined ? {} : this.props.style;
@@ -117,5 +116,5 @@ export default class BootstrapSwitchButton extends React.Component {
 				</div>
 			</div>
 		);
-	};
+	}
 }
